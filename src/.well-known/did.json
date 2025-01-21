@@ -1,0 +1,48 @@
+{
+    "id": "did:web:nzbn-credential.pxp.nz",
+    "@context": [
+      "https://www.w3.org/ns/did/v1",
+      {
+        "@base": "did:web:nzbn-credential.pxp.nz"
+      }
+    ],
+    "service": [
+      {
+        "id": "#linkeddomains",
+        "type": "LinkedDomains",
+        "serviceEndpoint": {
+          "origins": [
+            "https://nzbn-credential.pxp.nz/"
+          ]
+        }
+      },
+      {
+        "id": "#hub",
+        "type": "IdentityHub",
+        "serviceEndpoint": {
+          "instances": [
+            "https://hub.did.msidentity.com/v1.0/6af2bc6f-6fb0-41f1-a822-4d6f6a41ad35"
+          ]
+        }
+      }
+    ],
+    "verificationMethod": [
+      {
+        "id": "#21e30059c96e4a6a8045fd16e1d55983vcSigningKey-d7de0",
+        "controller": "did:web:nzbn-credential.pxp.nz",
+        "type": "JsonWebKey2020",
+        "publicKeyJwk": {
+          "crv": "P-256",
+          "kty": "EC",
+          "x": "TCjzb1kFSl5SrXHAxbPCgOfmb6Oi1CBUgwba9KN0K9U",
+          "y": "10chyJjf-rGXHiLFlq39qZRF5gEmwmfw8H7iRtxks3o"
+        }
+      }
+    ],
+    "authentication": [
+      "#21e30059c96e4a6a8045fd16e1d55983vcSigningKey-d7de0"
+    ],
+    "assertionMethod": [
+      "#21e30059c96e4a6a8045fd16e1d55983vcSigningKey-d7de0"
+    ]
+  }
